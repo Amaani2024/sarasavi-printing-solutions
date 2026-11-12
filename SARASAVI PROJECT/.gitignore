@@ -1,0 +1,21 @@
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# API keys and passwords
+.env
+.env.*
+!.env.example
+
+# Customer database and uploads
+*.db
+*.sqlite
+*.sqlite3
+uploads/
+data/
+
+# Other files
+.DS_Store

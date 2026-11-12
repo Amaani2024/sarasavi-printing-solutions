@@ -1,0 +1,110 @@
+/* Shared identity for every page: header, navigation and footer */
+.sv-shared-top,.sv-shared-header,.sv-shared-footer{box-sizing:border-box;font-family:inherit}
+.sv-shared-top *,.sv-shared-header *,.sv-shared-footer *{box-sizing:border-box}
+.sv-shell{width:min(1200px,calc(100% - 48px));margin:0 auto}
+.sv-shared-top{background:#32222b;color:#fff;font-size:13px;line-height:1.5}
+.sv-shared-top .sv-shell{min-height:38px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.sv-shared-top a{color:#fff;text-decoration:none;overflow-wrap:anywhere}
+.sv-shared-top a:hover{text-decoration:underline}
+.sv-dot{color:#f08a9b;padding:0 5px}
+.sv-shared-header{background:#fff;position:relative;z-index:100;box-shadow:0 6px 28px rgba(50,34,43,.055);border-bottom:1px solid #f1e8e9}
+.sv-nav-layout{display:flex;align-items:center;justify-content:space-between;gap:32px;min-height:86px}
+.sv-shared-brand{color:#cf294e!important;text-decoration:none!important;display:flex;flex-direction:column;align-items:flex-start;font-weight:800;font-size:23px;line-height:1.08;letter-spacing:-.7px;white-space:nowrap;margin:0!important;padding:0!important}
+.sv-shared-brand small{color:#827983;font-size:10px;font-weight:800;letter-spacing:2px;margin-top:4px}
+.sv-global-nav{display:flex;gap:4px;align-items:center;justify-content:flex-end;flex-wrap:nowrap}
+.sv-global-nav .sv-nav-link{color:#342f3e!important;background:transparent!important;font-size:15px;font-weight:650!important;line-height:1.2!important;white-space:nowrap;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;min-height:43px;padding:12px 16px!important;text-decoration:none!important;border:1px solid transparent!important;box-shadow:none!important;transition:background .2s,color .2s,transform .2s}
+.sv-global-nav .sv-nav-link:hover{color:#c6294b!important;background:#fff3f5!important;transform:translateY(-1px)}
+.sv-global-nav .sv-nav-link[aria-current="page"]{color:#bd2447!important;background:#fff0f2!important;border-color:#ffe4e9!important}
+.sv-global-nav .sv-nav-link.sv-contact-link{border-color:#edc3cc!important;margin-left:4px}
+.sv-global-nav .sv-nav-link.sv-contact-link[aria-current="page"]{background:#fff0f2!important}
+.sv-mobile-toggle{display:none;border:1px solid #ead5da;background:#fff;border-radius:10px;padding:10px;cursor:pointer;width:43px;height:42px;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+.sv-mobile-toggle span{display:block;width:20px;height:2px;background:#a82d49;border-radius:2px}
+.sv-shared-footer{background:#32222b;color:#f7eefa;padding:60px 0 22px}
+.sv-footer-grid{display:grid;grid-template-columns:1.3fr .8fr 1.1fr;gap:44px}
+.sv-footer-grid h3{font-size:16px;font-weight:750;color:#fff;margin:0 0 18px}
+.sv-footer-grid p{color:#e5d9e1;line-height:1.8;font-size:14px;margin:13px 0}
+.sv-footer-grid a{display:block;color:#e5d9e1;text-decoration:none;font-size:14px;line-height:1.85;overflow-wrap:anywhere}
+.sv-footer-grid a:hover{color:#fff;text-decoration:underline}
+.sv-footer-grid .sv-footer-brand{color:#fff;font-weight:800;font-size:23px;letter-spacing:-.5px;line-height:1.25}
+.sv-footer-brand small{display:block;color:#dcb3bf;letter-spacing:2px;font-size:10px}
+.sv-footer-bottom{border-top:1px solid rgba(255,255,255,.16);margin-top:36px;padding-top:20px;color:#e0d4de;font-size:12px}
+@media(max-width:950px){.sv-nav-layout{min-height:76px}.sv-mobile-toggle{display:flex}.sv-global-nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;box-shadow:0 16px 25px rgba(40,20,30,.13);padding:12px 24px 20px;flex-direction:column;align-items:stretch;gap:4px}.sv-global-nav.is-open{display:flex}.sv-global-nav .sv-nav-link{justify-content:flex-start;width:100%}.sv-global-nav .sv-nav-link.sv-contact-link{margin-left:0}}
+@media(max-width:620px){.sv-shell{width:min(100% - 30px,1200px)}.sv-shared-top .sv-shell{justify-content:center;min-height:34px}.sv-shared-top a{display:none}.sv-footer-grid{grid-template-columns:1fr;gap:28px}.sv-shared-footer{padding-top:44px}.sv-shared-brand{font-size:21px}}
+@media(prefers-reduced-motion:reduce){.sv-global-nav .sv-nav-link{transition:none}}
+
+/* NAVIGATION CONSISTENCY PATCH 2026-11-12
+   Identical dimensions, spacing and typography on ALL pages.
+   Header layout is viewport-wide (same edge padding on every page).
+*/
+:root { --sv-nav-edge: clamp(20px, 2vw, 42px); }
+.sv-shared-top > .sv-shell,
+.sv-shared-header > .sv-shell,
+.sv-shared-footer > .sv-shell {
+  width: calc(100% - (2 * var(--sv-nav-edge))) !important;
+  max-width: none !important;
+  margin-left: var(--sv-nav-edge) !important;
+  margin-right: var(--sv-nav-edge) !important;
+}
+.sv-shared-top {font-family:Arial, sans-serif !important; font-size:14px !important; font-weight:400 !important;}
+.sv-shared-top > .sv-shell {height:46px !important; min-height:46px !important; padding:0 !important;}
+.sv-shared-header {font-family:Arial,sans-serif !important; box-shadow:0 6px 28px rgba(50,34,43,.055) !important;}
+.sv-shared-header .sv-nav-layout {
+  min-height:104px !important;
+  height:104px !important;
+  padding-top:0 !important;
+  padding-bottom:0 !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:24px !important;
+}
+.sv-shared-header .sv-shared-brand {
+  font-family:Arial,sans-serif !important;
+  font-size:28px !important;
+  font-weight:800 !important;
+  line-height:1.08 !important;
+  letter-spacing:-.7px !important;
+  text-transform:none !important;
+}
+.sv-shared-header .sv-shared-brand small {
+  font-size:11px !important;
+  font-weight:800 !important;
+  line-height:1.35 !important;
+  letter-spacing:2px !important;
+}
+.sv-shared-header .sv-global-nav {
+  display:flex;
+  align-items:center !important;
+  flex-wrap:nowrap !important;
+  gap:5px !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+.sv-shared-header .sv-global-nav .sv-nav-link {
+  font-family:Arial,sans-serif !important;
+  font-size:18px !important;
+  font-weight:650 !important;
+  line-height:1.2 !important;
+  min-height:49px !important;
+  padding:12px 18px !important;
+  border-radius:999px !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  white-space:nowrap !important;
+}
+.sv-shared-header .sv-global-nav .sv-contact-link {margin-left:8px !important;}
+@media(max-width:1050px) {
+  .sv-shared-header .sv-nav-layout {height:80px !important;min-height:80px !important;}
+  .sv-shared-header .sv-mobile-toggle {display:flex !important;}
+  .sv-shared-header .sv-global-nav {display:none !important;position:absolute;top:100%;left:0;right:0;background:#fff;box-shadow:0 16px 25px rgba(40,20,30,.13);padding:14px 24px 22px !important;flex-direction:column;align-items:stretch !important;gap:4px !important;}
+  .sv-shared-header .sv-global-nav.is-open {display:flex !important;}
+  .sv-shared-header .sv-global-nav .sv-nav-link {width:100%;justify-content:flex-start !important;}
+  .sv-shared-header .sv-global-nav .sv-contact-link {margin-left:0 !important;}
+}
+@media(max-width:620px) {
+  .sv-shared-top > .sv-shell {height:36px !important; min-height:36px !important;}
+  .sv-shared-top > .sv-shell a {display:none !important;}
+  .sv-shared-header .sv-shared-brand {font-size:23px !important;}
+  .sv-shared-header .sv-shared-brand small {font-size:9px !important;}
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sarasavi Printing Solutions</title>
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+    body {
+      font-family: 'Arial', sans-serif;
+    }
+    /*nav bar*/
+    .nav-link.active {
+  background-color: #dc2626 !important; /* Red background */
+  color: #fff !important;               /* White text */
+  border-radius: 6px;                   /* Rounded corners */
+  padding: 0px 14px;                    /* Nice spacing */
+}
+
+.nav-link {
+  color: #000; /* Default black */
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #dc2626; /* Hover red */
+}
+
+
+    /* Hero Section */
+    #hero {
+      position: relative;
+      background: linear-gradient(-45deg, #dc2626, #f87171, #dc2626);
+      background-size: 400% 400%;
+      color: white;
+      text-align: center;
+      padding: 10rem 2rem;
+      overflow: hidden;
+      animation: gradientBG 15s ease infinite;
+    }
+   
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    #hero h1 { font-size: 3rem; font-weight: bold; }
+    #hero p { font-size: 1.5rem; margin-bottom: 2rem; }
+    .hero-btns a { margin: 0 0.5rem; }
+
+    /* Floating Icons */
+    .floating { position: absolute; color: rgba(255, 255, 255, 0.3); font-size: 3rem; animation-iteration-count: infinite; animation-timing-function: ease-in-out; }
+    .float1 { top: 15%; left: 10%; animation: float1Anim 7s infinite; }
+    .float2 { top: 35%; right: 10%; font-size: 2.5rem; animation: float2Anim 6s infinite; }
+    .float3 { bottom: 25%; left: 15%; animation: float3Anim 8s infinite; }
+    .float4 { bottom: 20%; right: 12%; animation: float4Anim 5s infinite; }
+
+    @keyframes float1Anim {0%{transform:translate(0,0) rotate(0deg);opacity:0.2;}50%{transform:translate(0,-20px) rotate(10deg);opacity:0.5;}100%{transform:translate(0,0) rotate(0deg);opacity:0.2;}}
+    @keyframes float2Anim {0%{transform:translate(0,0) rotate(0deg);opacity:0.25;}50%{transform:translate(20px,-10px) rotate(-15deg);opacity:0.5;}100%{transform:translate(0,0) rotate(0deg);opacity:0.25;}}
+    @keyframes float3Anim {0%{transform:translate(0,0) scale(1);opacity:0.2;}50%{transform:translate(0,-25px) scale(1.1);opacity:0.6;}100%{transform:translate(0,0) scale(1);opacity:0.2;}}
+    @keyframes float4Anim {0%{transform:translate(0,0) rotate(0deg);opacity:0.2;}50%{transform:translate(-15px,-15px) rotate(5deg);opacity:0.5;}100%{transform:translate(0,0) rotate(0deg);opacity:0.2;}}
+
+    /* Services */
+    #services { padding: 6rem 2rem; background-color: #f9f9f9; }
+    #services h2 { font-size: 2.5rem; font-weight: bold; margin-bottom: 1rem; }
+    #services p { font-size: 1.2rem; margin-bottom: 3rem; color: #555; }
+    .service-card { transition: transform 0.3s, box-shadow 0.3s; }
+    .service-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+
+    /* Features */
+    #features { padding: 6rem 2rem; }
+    #features h2 { font-size: 2.5rem; font-weight: bold; margin-bottom: 2rem; }
+    #features .feature { margin-bottom: 1rem; font-size: 1.1rem; }
+
+    /* CTA */
+    #cta { padding: 5rem 2rem; background: linear-gradient(to right, #dc2626, #ef4444, #f87171); color: white; text-align: center; }
+    #cta h2 { font-size: 2.5rem; font-weight: bold; margin-bottom: 1rem; }
+    #cta p { font-size: 1.2rem; margin-bottom: 2rem; }
+  
+/* Ticker container */
+.ticker {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker__inner {
+  display: inline-block;
+  animation: ticker 15s linear infinite;
+}
+
+.ticker__inner span {
+  display: inline-block;
+  margin-right: 3rem; /* spacing between repeats */
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+ .navbar-brand {
+      margin-left: auto; /* pushes it right */
+      padding-right: 0;  /* no extra gap */
+    }
+</style>
+<link href="premium-3d.css" rel="stylesheet"/>
+<link href="site-shared.css?v=20261112-nav3" rel="stylesheet"/><link href="upgrades.css?v=4" rel="stylesheet"/>  <link rel="stylesheet" href="compact-layout.css?v=20261112-compact1">
+</head>
+<body><div class="sv-shared-top"><div class="sv-shell"><span>Offset printing <span class="sv-dot">•</span> Packaging <span class="sv-dot">•</span> Finishing</span><a href="mailto:sarasavioffsetprinters@gmail.com">sarasavioffsetprinters@gmail.com</a></div></div>
+<header class="sv-shared-header"><div class="sv-shell sv-nav-layout"><a aria-label="Sarasavi Offset Printers home" class="sv-shared-brand" href="index.html"><span>SARASAVI</span><small>OFFSET PRINTERS</small></a><button aria-controls="sv-global-navigation" aria-expanded="false" aria-label="Toggle navigation" class="sv-mobile-toggle" type="button"><span></span><span></span><span></span></button><nav aria-label="Main navigation" class="sv-global-nav" id="sv-global-navigation"><a aria-current="page" class="sv-nav-link" href="index.html">Home</a><a class="sv-nav-link" href="about.html">About</a><a class="sv-nav-link" href="process.html">Services</a><a class="sv-nav-link" href="products.html">Products</a><a class="sv-nav-link" href="project.html">Projects</a><a class="sv-nav-link sv-contact-link" href="contact.html">Contact</a></nav></div></header>
+<!-- ================= HEADER SECTION ================= -->
+<!-- Navbar -->
+<!-- ================= HERO SECTION ================= -->
+<section aria-label="Sarasavi printing solutions" class="sv-hero" id="hero">
+<div class="sv-hero-layout">
+<div class="sv-hero-copy">
+<span class="sv-kicker">OFFSET PRINTING &amp; PACKAGING</span>
+<h1 id="heroText">Printing that fits.<br/><em>Work that lasts.</em></h1>
+<p id="tagline">Offset printing, packaging and finishing for businesses that need reliable print work.</p>
+<div class="hero-btns">
+<a class="btn btn-light btn-lg" href="products.html">Explore products <i aria-hidden="true" class="bi bi-arrow-up-right ms-1"></i></a>
+<a class="btn btn-outline-light btn-lg" href="contact.html">Request a quote</a>
+</div>
+<div class="sv-trust"><span><i aria-hidden="true" class="bi bi-palette-fill"></i> Designed with care</span><span><i aria-hidden="true" class="bi bi-box-seam"></i> Packaging &amp; print</span></div>
+</div>
+<div aria-hidden="true" class="sv-scene">
+<div class="sv-halo"></div>
+<div class="sv-print-card sv-print-back"><span class="sv-back-title">MADE<br/>TO<br/>STAND<br/>OUT.</span><span class="sv-back-disc"></span></div>
+<div class="sv-print-card sv-print-main"><span class="sv-main-label">SARASAVI / PRINT STUDIO</span><span class="sv-main-title">BOLD<br/>IDEAS.<br/>BEAUTIFUL<br/>PRINT.</span><span class="sv-main-wave"></span></div>
+<div class="sv-float-tag sv-tag-top"><i class="bi bi-stars"></i> Premium finishing</div>
+<div class="sv-float-tag sv-tag-bottom"><i class="bi bi-layers-half"></i> Layers of creativity</div>
+</div>
+</div>
+</section>
+<!-- ================= SERVICES ================= -->
+<section class="text-center" id="services">
+<h2>Our Printing Services</h2>
+<p>Printing and finishing services for a range of business requirements.</p>
+<div class="row g-4">
+<div class="col-md-3">
+<div class="card service-card p-3 h-100">
+<i class="bi bi-box2-heart display-4 text-danger mb-3"></i>
+<h5>Cartons</h5>
+<p>Printed cartons and packaging for your products.</p>
+</div>
+</div>
+<div class="col-md-3">
+<div class="card service-card p-3 h-100">
+<i class="bi bi-stickies display-4 text-danger mb-3"></i>
+<h5>Labels &amp; Stickers</h5>
+<p>Labels and stickers in a range of formats.</p>
+</div>
+</div>
+<div class="col-md-3">
+<div class="card service-card p-3 h-100">
+<i class="bi bi-image display-4 text-danger mb-3"></i>
+<h5>Posters</h5>
+<p>Posters and banners for events and businesses.</p>
+</div>
+</div>
+<div class="col-md-3">
+<div class="card service-card p-3 h-100">
+<i class="bi bi-file-earmark-text display-4 text-danger mb-3"></i>
+<h5>File Covers &amp; Handouts</h5>
+<p>File covers, folders and printed documents.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= FEATURES ================= -->
+<section class="text-center" id="features">
+<h2>How We Work</h2>
+<div class="row justify-content-center mt-4">
+<div class="col-md-4 feature"><i class="bi bi-check-circle text-danger me-2"></i>Over 25 years of printing expertise</div>
+<div class="col-md-4 feature"><i class="bi bi-check-circle text-danger me-2"></i>State-of-the-art printing technology</div>
+<div class="col-md-4 feature"><i class="bi bi-check-circle text-danger me-2"></i>Quick turnaround times</div>
+<div class="col-md-4 feature"><i class="bi bi-check-circle text-danger me-2"></i>Competitive pricing</div>
+<div class="col-md-4 feature"><i class="bi bi-check-circle text-danger me-2"></i>Quality guaranteed</div>
+<div class="col-md-4 feature"><i class="bi bi-check-circle text-danger me-2"></i>Custom design services</div>
+</div>
+</section>
+<!-- ================= CTA ================= -->
+<section id="cta">
+<h2>Need a printing quote?</h2>
+<p>Tell us the product, size and quantity. We can discuss your printing requirements.</p>
+<a class="btn btn-light btn-lg me-2" href="contact.html">Contact Us Today</a>
+<a class="btn btn-outline-light btn-lg" href="contact.html#location">Visit Our Location</a>
+</section>
+<!--nav bar-->
+<!-- ================= FOOTER ================= -->
+<link href="assistant.css" rel="stylesheet"/>
+<section aria-label="Customer tools" class="up-quicklinks"><div class="sv-shell"><div><strong>Planning a print job?</strong><span>Send details, browse recent work or check an existing request.</span></div><div class="up-quickactions"><a href="quote.html">Request a quote</a><a href="tracking.html">Track request</a><a href="faq.html">Help &amp; FAQs</a></div></div></section><footer class="sv-shared-footer"><div class="sv-shell"><div class="sv-footer-grid"><div><a class="sv-footer-brand" href="index.html">SARASAVI <small>OFFSET PRINTERS</small></a><p>Offset printing, packaging and print-related supplies.</p></div><div><h3>Explore</h3><div class="sv-footer-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="process.html">Services</a><a href="products.html">Products</a><a href="project.html">Projects</a></div></div><div><h3>Get in touch</h3><a href="mailto:sarasavioffsetprinters@gmail.com">sarasavioffsetprinters@gmail.com</a><a href="tel:+94773169878">+94 77 316 9878</a><p>No. 282, Hemmathagama Road, Kottawatta, Mawanella, Sri Lanka</p></div></div><div class="sv-footer-bottom">© 2025 Sarasavi Offset Printers. All rights reserved.</div></div></footer><script defer="" src="assistant.js"></script>
+<script defer="" src="premium-3d.js"></script>
+<script defer="True" src="site-shared.js"></script><script defer="True" src="upgrades.js?v=4"></script></body>
+</html>

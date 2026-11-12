@@ -1,0 +1,59 @@
+/* Sarasavi — balanced professional sizing, 2026-11-12.
+   Loaded last on each page so all eleven pages stay visually consistent.
+   Typography remains accessible; no browser zoom tricks are used. */
+:root { --sv-nav-edge: clamp(18px, 2.6vw, 42px); }
+/* Consistent compact brand/header across every page */
+.sv-shared-top { font-size:12px !important; }
+.sv-shared-top > .sv-shell { height:34px !important; min-height:34px !important; }
+.sv-shared-header .sv-nav-layout { height:78px !important; min-height:78px !important; gap:16px !important; }
+.sv-shared-header .sv-shared-brand { font-size:23px !important; letter-spacing:-.55px !important; }
+.sv-shared-header .sv-shared-brand small { font-size:9px !important; letter-spacing:1.7px !important; }
+.sv-shared-header .sv-global-nav { gap:3px !important; }
+.sv-shared-header .sv-global-nav .sv-nav-link { font-size:15px !important; min-height:39px !important; padding:9px 13px !important; }
+.sv-shared-header .sv-global-nav .sv-contact-link { margin-left:5px !important; }
+/* Less empty vertical space; keep gradients, shadows, artwork and hover effects */
+#hero.sv-hero { min-height:560px !important; padding-top:4.1rem !important; padding-bottom:4.1rem !important; }
+#hero.sv-hero h1 { font-size:clamp(2.3rem,4.05vw,4.2rem) !important; }
+#hero.sv-hero p { font-size:1.04rem !important; line-height:1.65 !important; }
+.sv-kicker { margin-bottom:1.1rem !important; }
+#services { padding-top:4.6rem !important; padding-bottom:4.6rem !important; }
+#features { padding-top:4.5rem !important; padding-bottom:4.5rem !important; }
+#cta { padding-top:4.5rem !important; padding-bottom:4.5rem !important; }
+.sv-page-intro { padding-top:4.5rem !important; padding-bottom:4.5rem !important; }
+.sc-hero { padding-top:4.5rem !important; padding-bottom:4.5rem !important; }
+.sv-upgrade .up-hero, .sv-upgrade .up-hero.up-small { padding-top:4rem !important; padding-bottom:3.7rem !important; }
+.up-hero h1 { font-size:clamp(2.25rem,4.2vw,4rem) !important; }
+.up-hero p:not(.up-eyebrow) { font-size:1.03rem !important; line-height:1.65 !important; }
+.up-section { padding-top:3.7rem !important; padding-bottom:4.3rem !important; }
+.up-panel,.up-note { border-radius:22px !important; padding:clamp(20px,2.3vw,32px) !important; }
+.up-form { gap:16px !important; }
+.up-fields { gap:15px !important; }
+.up-form input,.up-form select,.up-form textarea { padding:11px 13px !important; }
+.up-spec-grid,.up-process-grid { gap:16px !important; margin:24px 0 !important; }
+.up-spec-grid article,.up-process-grid article { padding:20px !important; border-radius:18px !important; }
+.card,.service-card,.value-card,.team-card,.testimonial-card,.industry-card,.location-card,.card-hover { border-radius:18px !important; }
+.card .card-body,.service-card { padding:1.2rem !important; }
+.sv-shared-footer { padding-top:44px !important; padding-bottom:18px !important; }
+.sv-footer-grid { gap:30px !important; }
+.sv-footer-grid h3 { margin-bottom:12px !important; }
+.sv-footer-bottom { margin-top:24px !important; }
+@media(max-width:1050px){
+ .sv-shared-header .sv-nav-layout { height:70px !important; min-height:70px !important; }
+ .sv-shared-header .sv-global-nav { gap:4px !important; }
+ .sv-shared-header .sv-global-nav .sv-nav-link { width:100%; min-height:42px !important; justify-content:flex-start !important; padding:10px 16px !important; }
+ #hero.sv-hero { min-height:auto !important; padding-top:3.5rem !important; padding-bottom:3.5rem !important; }
+}
+@media(max-width:620px){
+ .sv-shared-top > .sv-shell { height:32px !important; min-height:32px !important; }
+ .sv-shared-header .sv-nav-layout { height:64px !important; min-height:64px !important; }
+ .sv-shared-header .sv-shared-brand { font-size:21px !important; }
+ #hero.sv-hero { padding-top:3.2rem !important; padding-bottom:3.2rem !important; }
+ #hero.sv-hero h1 { font-size:clamp(2.05rem,9vw,2.8rem) !important; }
+ #services,#features,#cta { padding-top:3.5rem !important; padding-bottom:3.5rem !important; }
+ .sv-page-intro,.sc-hero { padding-top:3rem !important; padding-bottom:3rem !important; }
+ .sv-upgrade .up-hero, .sv-upgrade .up-hero.up-small { padding-top:3rem !important; padding-bottom:3rem !important; }
+ .up-hero h1 { font-size:clamp(2.05rem,9vw,2.8rem) !important; }
+ .up-section { padding-top:3rem !important; padding-bottom:3rem !important; }
+ .up-panel { padding:20px !important; }
+ .sv-footer-grid { gap:22px !important; }
+}

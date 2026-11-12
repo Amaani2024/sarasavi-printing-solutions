@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sarasavi Printing Solutions</title>
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Make back/forward navigation scroll smoothly
+  window.addEventListener("popstate", function () {
+    setTimeout(() => {
+      window.scrollTo({
+        top: window.scrollY,
+        behavior: "smooth"
+      });
+    }, 0);
+  });
+</script>
+<style>
+    body {
+      font-family: 'Arial', sans-serif;
+    }
+    /*nav bar*/
+    .nav-link.active {
+  background-color: #dc2626 !important; /* Red background */
+  color: #fff !important;               /* White text */
+  border-radius: 6px;                   /* Rounded corners */
+  padding: 6px 14px;                    /* Nice spacing */
+}
+
+.nav-link {
+  color: #000; /* Default black */
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #dc2626; /* Hover red */
+}
+
+    /* Hero Section */
+    #hero {
+      position: relative;
+      background: linear-gradient(-45deg, #dc2626, #ef4444, #f87171, #dc2626);
+      background-size: 400% 400%;
+      color: white;
+      text-align: center;
+      padding: 10rem 2rem;
+      overflow: hidden;
+      animation: gradientBG 15s ease infinite;
+    }
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    #hero h1 { font-size: 3rem; font-weight: bold; }
+    #hero p { font-size: 1.5rem; margin-bottom: 2rem; }
+    .hero-btns a { margin: 0 0.5rem; }
+
+    /* Floating Icons */
+    .floating { position: absolute; color: rgba(255, 255, 255, 0.3); font-size: 3rem; animation-iteration-count: infinite; animation-timing-function: ease-in-out; }
+    .float1 { top: 15%; left: 10%; animation: float1Anim 7s infinite; }
+    .float2 { top: 35%; right: 10%; font-size: 2.5rem; animation: float2Anim 6s infinite; }
+    .float3 { bottom: 25%; left: 15%; animation: float3Anim 8s infinite; }
+    .float4 { bottom: 20%; right: 12%; animation: float4Anim 5s infinite; }
+
+    @keyframes float1Anim {0%{transform:translate(0,0) rotate(0deg);opacity:0.2;}50%{transform:translate(0,-20px) rotate(10deg);opacity:0.5;}100%{transform:translate(0,0) rotate(0deg);opacity:0.2;}}
+    @keyframes float2Anim {0%{transform:translate(0,0) rotate(0deg);opacity:0.25;}50%{transform:translate(20px,-10px) rotate(-15deg);opacity:0.5;}100%{transform:translate(0,0) rotate(0deg);opacity:0.25;}}
+    @keyframes float3Anim {0%{transform:translate(0,0) scale(1);opacity:0.2;}50%{transform:translate(0,-25px) scale(1.1);opacity:0.6;}100%{transform:translate(0,0) scale(1);opacity:0.2;}}
+    @keyframes float4Anim {0%{transform:translate(0,0) rotate(0deg);opacity:0.2;}50%{transform:translate(-15px,-15px) rotate(5deg);opacity:0.5;}100%{transform:translate(0,0) rotate(0deg);opacity:0.2;}}
+
+    /* Services */
+    #services { padding: 6rem 2rem; background-color: #f9f9f9; }
+    #services h2 { font-size: 2.5rem; font-weight: bold; margin-bottom: 1rem; }
+    #services p { font-size: 1.2rem; margin-bottom: 3rem; color: #555; }
+    .service-card { transition: transform 0.3s, box-shadow 0.3s; }
+    .service-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+
+    /* Features */
+    #features { padding: 6rem 2rem; }
+    #features h2 { font-size: 2.5rem; font-weight: bold; margin-bottom: 2rem; }
+    #features .feature { margin-bottom: 1rem; font-size: 1.1rem; }
+
+    /* CTA */
+    #cta { padding: 6rem 2rem; background: linear-gradient(to right, #dc2626, #ef4444, #f87171); color: white; text-align: center; }
+    #cta h2 { font-size: 2.5rem; font-weight: bold; margin-bottom: 1rem; }
+    #cta p { font-size: 1.2rem; margin-bottom: 2rem; }
+  
+       
+/* Ticker container */
+.ticker {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker__inner {
+  display: inline-block;
+  animation: ticker 15s linear infinite;
+}
+
+.ticker__inner span {
+  display: inline-block;
+  margin-right: 3rem; /* spacing between repeats */
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+ .navbar-brand {
+      margin-left: auto; /* pushes it right */
+      padding-right: 0;  /* no extra gap */
+    }
+  </style>
+<link href="premium-3d.css" rel="stylesheet"/>
+<link href="site-shared.css?v=20261112-nav3" rel="stylesheet"/><link href="upgrades.css?v=4" rel="stylesheet"/>  <link rel="stylesheet" href="compact-layout.css?v=20261112-compact1">
+</head>
+<body><div class="sv-shared-top"><div class="sv-shell"><span>Offset printing <span class="sv-dot">•</span> Packaging <span class="sv-dot">•</span> Finishing</span><a href="mailto:sarasavioffsetprinters@gmail.com">sarasavioffsetprinters@gmail.com</a></div></div>
+<header class="sv-shared-header"><div class="sv-shell sv-nav-layout"><a aria-label="Sarasavi Offset Printers home" class="sv-shared-brand" href="index.html"><span>SARASAVI</span><small>OFFSET PRINTERS</small></a><button aria-controls="sv-global-navigation" aria-expanded="false" aria-label="Toggle navigation" class="sv-mobile-toggle" type="button"><span></span><span></span><span></span></button><nav aria-label="Main navigation" class="sv-global-nav" id="sv-global-navigation"><a class="sv-nav-link" href="index.html">Home</a><a class="sv-nav-link" href="about.html">About</a><a class="sv-nav-link" href="process.html">Services</a><a aria-current="page" class="sv-nav-link" href="products.html">Products</a><a class="sv-nav-link" href="project.html">Projects</a><a class="sv-nav-link sv-contact-link" href="contact.html">Contact</a></nav></div></header>
+<!-- ================= HEADER SECTION ================= -->
+<!-- Navbar -->
+<!-- Header -->
+<div class="text-center mb-5" data-aos="fade-up">
+<h1 class="display-5">Our Products</h1>
+<p class="text-muted fs-5">Comprehensive printing solutions tailored to your specific needs. From concept to completion, we deliver exceptional quality and service.</p>
+</div>
+<!-- Services Grid -->
+<div class="row g-4 mb-5">
+<!-- Service 1 -->
+<div class="col-md-6 col-lg-4" data-aos="zoom-in">
+<div class="card service-card h-100">
+<div class="card-body">
+<div class="mb-3 text-primary"><i class="bi bi-box-seam" style="font-size:2rem;"></i></div>
+<h5 class="card-title">Cartons &amp; Packaging</h5>
+<p class="card-text">Custom carton design and printing for product packaging, shipping boxes, and retail displays.</p>
+<ul class="list-unstyled">
+<li>✔ Custom sizes and designs</li>
+<li>✔ Food-grade packaging</li>
+<li>✔ Corrugated cardboard</li>
+<li>✔ Brand integration</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="col-md-6 col-lg-4" data-aos="zoom-in">
+<div class="card service-card h-100">
+<div class="card-body">
+<div class="mb-3 text-primary"><i class="bi bi-tags" style="font-size:2rem;"></i></div>
+<h5 class="card-title">Labels &amp; Stickers</h5>
+<p class="card-text">Professional labels for products, branding, and promotional purposes with various materials.</p>
+<ul class="list-unstyled">
+<li>✔ Waterproof options</li>
+<li>✔ Die-cut shapes</li>
+<li>✔ Multiple finishes</li>
+<li>✔ Barcode integration</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="col-md-6 col-lg-4" data-aos="zoom-in">
+<div class="card service-card h-100">
+<div class="card-body">
+<div class="mb-3 text-primary"><i class="bi bi-image" style="font-size:2rem;"></i></div>
+<h5 class="card-title">Posters &amp; Banners</h5>
+<p class="card-text">High-quality posters and banners for advertising, events, and business promotions.</p>
+<ul class="list-unstyled">
+<li>✔ Large-format printing</li>
+<li>✔ Indoor/outdoor use</li>
+<li>✔ UV resistant inks</li>
+<li>✔ Custom sizes</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Service 4 -->
+<div class="col-md-6 col-lg-4" data-aos="zoom-in">
+<div class="card service-card h-100">
+<div class="card-body">
+<div class="mb-3 text-primary"><i class="bi bi-folder2" style="font-size:2rem;"></i></div>
+<h5 class="card-title">File Covers</h5>
+<p class="card-text">Custom file covers for schools, offices, and professional presentations.</p>
+<ul class="list-unstyled">
+<li>✔ Corporate branding</li>
+<li>✔ Various paper stocks</li>
+<li>✔ Lamination options</li>
+<li>✔ Die-cut designs</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4" data-aos="zoom-in">
+<div class="card service-card h-100">
+<div class="card-body">
+<div class="mb-3 text-primary">
+<i class="bi bi-file-earmark-text" style="font-size:2rem;"></i>
+</div>
+<h5 class="card-title">Handouts</h5>
+<p class="card-text">Professionally printed handouts for events, meetings, and promotions.</p>
+<ul class="list-unstyled">
+<li>✔ High-quality paper</li>
+<li>✔ Full-color or black &amp; white</li>
+<li>✔ Single or double-sided</li>
+<li>✔ Custom sizes available</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4" data-aos="zoom-in">
+<div class="card service-card h-100">
+<div class="card-body">
+<div class="mb-3 text-primary">
+<i class="bi bi-grid-3x3-gap" style="font-size:2rem;"></i>
+</div>
+<h5 class="card-title">Plates</h5>
+<p class="card-text">High-quality printing plates available in multiple standard sizes.</p>
+<div class="table-responsive">
+<table class="table table-sm table-bordered">
+<thead class="table-light">
+<tr>
+<th>Type</th>
+<th>Size</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>GTO</td><td>410×510</td></tr>
+<tr><td>KORD</td><td>550×650</td></tr>
+<tr><td>KORS</td><td>724×615</td></tr>
+<tr><td>KOMMORY</td><td></td></tr>
+<tr><td>KOR</td><td></td></tr>
+<tr><td>KORA</td><td></td></tr>
+<tr><td>SORD</td><td>915×715</td></tr>
+<tr><td>SM10</td><td>1030×770</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center mb-5" data-aos="fade-up">
+<h1 class="display-5">Our Services</h1>
+<p class="text-muted fs-5">
+    Wide range of professional printing and finishing services designed to bring your ideas to life. 
+    From design to delivery, we ensure quality, precision, and reliability every step of the way.
+  </p>
+</div>
+<div class="col-md-6 col-lg-4" data-aos="zoom-in">
+<div class="card service-card h-100">
+<div class="card-body">
+<div class="mb-3 text-primary">
+<i class="bi bi-printer-fill" style="font-size:2rem;"></i>
+</div>
+<h5 class="card-title">Printing</h5>
+<p class="card-text">High-quality offset printing with sharp details and vibrant colors.</p>
+</div>
+</div>
+</div>
+<!-- Laminating -->
+<div class="col-md-6 col-lg-4" data-aos="zoom-in">
+<div class="card service-card h-100">
+<div class="card-body">
+<div class="mb-3 text-primary">
+<i class="bi bi-layers" style="font-size:2rem;"></i>
+</div>
+<h5 class="card-title">Laminating</h5>
+<p class="card-text">Gloss or matte lamination for durability and premium finish.</p>
+</div>
+</div>
+</div>
+<!-- Die Cutting -->
+<div class="col-md-6 col-lg-4" data-aos="zoom-in">
+<div class="card service-card h-100">
+<div class="card-body">
+<div class="mb-3 text-primary">
+<i class="bi bi-scissors" style="font-size:2rem;"></i>
+</div>
+<h5 class="card-title">Die Cutting</h5>
+<p class="card-text">Custom shapes and creative designs with precision die cutting.</p>
+</div>
+</div>
+</div>
+<!-- Carton Pasting -->
+<div class="col-md-6 col-lg-4" data-aos="zoom-in">
+<div class="card service-card h-100">
+<div class="card-body">
+<div class="mb-3 text-primary">
+<i class="bi bi-box-seam" style="font-size:2rem;"></i>
+</div>
+<h5 class="card-title">Carton Pasting</h5>
+<p class="card-text">Strong and accurate carton pasting solutions for packaging needs.</p>
+</div>
+</div>
+</div>
+<!-- UV Varnishing -->
+<div class="col-md-6 col-lg-4" data-aos="zoom-in">
+<div class="card service-card h-100">
+<div class="card-body">
+<div class="mb-3 text-primary">
+<i class="bi bi-brightness-high" style="font-size:2rem;"></i>
+</div>
+<h5 class="card-title">UV Varnishing</h5>
+<p class="card-text">Glossy UV coating for enhanced protection and elegant shine.</p>
+</div>
+</div>
+</div>
+<!-- Why Choose Us -->
+<section class="bg-light-blue py-5 rounded" data-aos="fade-up">
+<div class="container text-center">
+<h2 class="mb-4">Why Choose Our Process?</h2>
+<div class="row g-4">
+<div class="col-md-4">
+<i class="bi bi-clock text-primary" style="font-size:2rem;"></i>
+<h5 class="mt-3">Fast Turnaround</h5>
+<p class="text-muted">Most orders completed within 24-48 hours without compromising quality</p>
+</div>
+<div class="col-md-4">
+<i class="bi bi-shield-check text-primary" style="font-size:2rem;"></i>
+<h5 class="mt-3">Quality Guarantee</h5>
+<p class="text-muted">100% satisfaction guarantee with free reprints if not completely satisfied</p>
+</div>
+<div class="col-md-4">
+<i class="bi bi-people text-primary" style="font-size:2rem;"></i>
+<h5 class="mt-3">Expert Team</h5>
+<p class="text-muted">Professional team with over 25 years of combined printing experience</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<div class="text-center bg-primary text-white rounded p-5 mt-5" data-aos="fade-up">
+<h2 class="mb-3">Ready to Get Started?</h2>
+<p class="mb-4">Contact us today for a free consultation and quote for your printing needs</p>
+<a class="btn btn-light btn-lg me-3" href="contact.html">Get Free Quote</a>
+<a class="btn btn-outline-light btn-lg" href="works.html">View Our Work</a>
+</div>
+</div>
+<!-- Bootstrap JS -->
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 800, once: true });
+</script>
+<section aria-label="Customer tools" class="up-quicklinks"><div class="sv-shell"><div><strong>Planning a print job?</strong><span>Send details, browse recent work or check an existing request.</span></div><div class="up-quickactions"><a href="quote.html">Request a quote</a><a href="tracking.html">Track request</a><a href="faq.html">Help &amp; FAQs</a></div></div></section><footer class="sv-shared-footer"><div class="sv-shell"><div class="sv-footer-grid"><div><a class="sv-footer-brand" href="index.html">SARASAVI <small>OFFSET PRINTERS</small></a><p>Offset printing, packaging and print-related supplies.</p></div><div><h3>Explore</h3><div class="sv-footer-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="process.html">Services</a><a href="products.html">Products</a><a href="project.html">Projects</a></div></div><div><h3>Get in touch</h3><a href="mailto:sarasavioffsetprinters@gmail.com">sarasavioffsetprinters@gmail.com</a><a href="tel:+94773169878">+94 77 316 9878</a><p>No. 282, Hemmathagama Road, Kottawatta, Mawanella, Sri Lanka</p></div></div><div class="sv-footer-bottom">© 2025 Sarasavi Offset Printers. All rights reserved.</div></div></footer><script defer="" src="premium-3d.js"></script>
+<script defer="True" src="site-shared.js"></script><script defer="True" src="upgrades.js?v=4"></script></body>
+<link href="assistant.css" rel="stylesheet"/>
+<script defer="" src="assistant.js"></script>
+</html>

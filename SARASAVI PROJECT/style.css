@@ -1,0 +1,24 @@
+
+/* Responsive Fixes for Mobile (portrait) */
+@media (max-width: 768px) {
+  /* Need Samples section */
+  .samples-section form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .samples-section input {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 10px;
+  }
+
+  .samples-section button {
+    width: 100%;
+  }
+
+  /* Footer columns stack neatly */
+  footer .col-md-3 {
+    text-align: center;
+  }
+}
